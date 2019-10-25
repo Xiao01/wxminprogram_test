@@ -1,0 +1,128 @@
+<!--
+<view class="flex-wrp flex-row"  >
+     <view class="flex-item bc_green">1</view>
+     <view class="flex-item bc_red">2</view>
+     <view class="flex-item bc_blue">3</view>
+     <view class="flex-item bc_green">4</view>
+     <view class="flex-item bc_red">5</view>
+     <view class="flex-item bc_blue">6</view>
+     
+  </view>
+
+  <text>
+    要显示的内容
+    <text>嵌套的内容</text>
+    ---
+</text>
+
+
+<text style="margin: 20px;font-size: 40px;color: {{color}}">
+  {{text}}
+  <text style="color:#00ffff">（最后一行）</text>
+</text>
+<view style="margin: 20px;">
+  <button bindtap="add">添加一行</button>
+  <button bindtap="remove">删除一行</button>
+  <button bindtap="setColor">设置文字颜色</button>
+</view>
+
+
+<block wx:for-items="{{iconSize}}">
+  <icon type="{{iconType[index]}}" size="{{item}}" />
+</block>
+
+
+<view style="margin-top:30px">
+  <block wx:for-items="{{iconType}}">
+    <icon type="{{item}}" size="45" />
+  </block>
+</view>
+
+
+<view style="margin-top:30px">
+  <block wx:for-items="{{iconColor}}">
+    <icon type="safe_success" size="45" color="{{item}}" />
+  </block>
+</view>
+
+<view style="margin:50px">
+    <progress percent="20" show-info/>
+    <progress percent="40" active show-info/>
+    <progress percent="60" stroke-width="6" show-info />
+    <progress percent="80" color="#10AEFF" show-info />
+</view>
+
+
+<view>
+       <view class="section__title">垂直滚动</view>
+       <scroll-view scroll-y="true" style="height: 200px;"  bindscrolltoupper="upper" bindscrolltolower="lower"  upper-threshold="100" lower-threshold="300" bindscroll="scroll" scroll-top="100"  scroll-into-view="yellow" >
+           <view id="green" class="scroll-view-item bc_green"></view>
+           <view id="red"  class="scroll-view-item bc_red"></view>
+           <view id="yellow" class="scroll-view-item bc_yellow"></view>
+           <view id="blue" class="scroll-view-item bc_blue"></view>
+       </scroll-view>
+ </view>
+
+
+ <view>
+     <view class="section__title">水平滚动</view>
+     <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%;">
+         <view id="green" class="scroll-view-item_H bc_green"></view>
+         <view id="red"  class="scroll-view-item_H bc_red"></view>
+         <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+         <view id="blue" class="scroll-view-item_H bc_blue"></view>
+     </scroll-view>
+ </view>
+-->
+<!--
+ <view>
+         <view class="section__title">垂直滚动</view>
+         <scroll-view scroll-y="true" style="height: 200px;"   bindscrolltoupper="upper" bindscrolltolower="lower"  upper-threshold="100" lower-threshold="300">
+
+            <view id="green" class="scroll-view-item bc_green"></view>
+            <view id="red"  class="scroll-view-item bc_red"></view>
+            <view id="yellow" class="scroll-view-item bc_yellow"></view>
+            <view id="blue" class="scroll-view-item bc_blue"></view>
+        </scroll-view>
+
+         <view class="section__title">水平滚动</view>
+         <scroll-view class="scroll-view_H" scroll-x="true"  scroll-left="50" style="width: 100%"
+     bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
+         <view id="green" class="scroll-view-item_H bc_green"></view>
+         <view id="red"  class="scroll-view-item_H bc_red"></view>
+         <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+         <view id="blue" class="scroll-view-item_H bc_blue"></view>
+        </scroll-view>
+ </view>
+ -->
+<!--
+ <scroll-view class="box" scroll-x="true" >
+<view class="box-item" >1</view>
+<view class="box-item" >2</view>
+<view class="box-item" >3</view>
+</scroll-view>
+-->
+<!--
+<swiper indicator-dots="{{indicatorDots}}"  vertical="{{vertical}}" current="2"  autoplay="true" interval="2000" duration="2000" bindchange="change">
+    <block wx:for-items="{{background}}"  wx:key="unique">
+         <swiper-item>
+              <view class="swiper-item bc_{{item}}"></view>
+         </swiper-item>
+    </block>
+ </swiper>  
+ -->
+
+
+ <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default"> 
+    default
+</button>
+<button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" > 
+    primary
+</button>
+<button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}"> 
+    warn
+</button>
+<!--  通过hover样式改变了第4个按钮按下的效果 -->
+<button hover-class="hover" bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+<button bindtap="setPlain">点击设置以上按钮plain属性</button>
+<button bindtap="setLoading">点击设置以上按钮loading属性</button>
