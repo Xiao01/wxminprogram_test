@@ -1,6 +1,7 @@
 这是照着《小程序与云开发实战36讲》的教程 编写的练习代码
-第一次提交到 第1-6课
 
+-第一次提交 第1-6课
+-第二次提交 第7-9课
 ## 参考文档
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
