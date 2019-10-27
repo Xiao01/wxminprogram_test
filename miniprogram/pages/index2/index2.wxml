@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 <view class="flex-wrp flex-row"  >
      <view class="flex-item bc_green">1</view>
      <view class="flex-item bc_red">2</view>
@@ -113,6 +113,7 @@
  -->
 
 
+
  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default"> 
     default
 </button>
@@ -126,3 +127,155 @@
 <button hover-class="hover" bindtap="setDisabled">点击设置以上按钮disabled属性</button>
 <button bindtap="setPlain">点击设置以上按钮plain属性</button>
 <button bindtap="setLoading">点击设置以上按钮loading属性</button>
+=======
+<!--
+<button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default">
+  default
+</button>
+<button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}">
+  primary
+</button>
+<button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}">
+  warn
+</button>
+#  通过hover样式改变了第4个按钮按下的效果 
+<button hover-class="hover" bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+<button bindtap="setPlain">点击设置以上按钮plain属性</button>
+<button bindtap="setLoading">点击设置以上按钮loading属性</button>
+-->
+<!-- <view style="margin:20px">
+  <checkbox-group bindchange="checkboxChange">
+    <label style="display: block; margin-bottom: 10px;" wx:for-items="{{items}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+    </label>
+  </checkbox-group>
+</view> -->
+
+<!-- 
+<view style="margin:10px">
+  <input placeholder="请输入你的名字" value="默认值" />
+  <input placeholder-style="color:red" placeholder="占位符字体是红色的" auto-focus/>
+  <input style="margin-top:20px" placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+  <button bindtap="bindButtonTap">使得输入框获取焦点（在真机上测试）</button>
+  <input style="margin-top:20px" maxlength="5" placeholder="最大输入长度5" />
+  <view style="margin-top:20px">你输入的是：{{inputValue}}</view>
+  <input bindinput="bindKeyInput" placeholder="输入同步到view中" />
+  <input style="margin-top:20px" bindinput="bindReplaceInput" placeholder="将<和>进行转义" />
+  <input style="margin-top:20px" bindinput="bindHideKeyboard" placeholder="输入close自动收起键盘" />
+  <input style="margin-top:20px" type="emoji" placeholder="这是一个带有表情的输入框" />
+  <input type="digit" placeholder="带小数点的数字键盘" />
+  <input type="idcard" placeholder="身份证输入键盘" />
+  <input password="true" placeholder="请输入密码" />
+</view> -->
+
+<!-- checkbox 组件为例，布局代码如下： -->
+
+<!-- <view style="margin:10px" wx:for-items="{{checkboxItems}}">
+  <label>
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+    <text>{{item.value}}</text>
+  </label>
+</view> -->
+
+<!-- <radio-group>
+  <view style="margin:20px" wx:for-items="{{radioItems}}">
+    <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}"></radio>
+    <label for="{{item.name}}">
+      <text>{{item.name}}</text>
+    </label>
+  </view>
+</radio-group> -->
+
+
+<!-- <view style="margin:20px" wx:for-items="{{checkboxItems}}">
+  <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+  <checkbox id="bind_checkbox{{index}}"
+        value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+  <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+  <label for="bind_checkbox{{index}}">
+    <text>{{item.value}}</text>
+  </label>
+</view> -->
+
+<!-- 
+<radio-group bindchange="radioChange">
+  <label style="display:block;margin:{{item.margin}}px" wx:for-items="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+  </label>
+</radio-group> -->
+
+<!-- <radio-group bindchange="radioChange">
+  <label style="display:block;margin:{{item.margin}}px" wx:for-items="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+  </label>
+</radio-group> -->
+
+<!-- 
+<view style="flex-direction:column;display:flex">
+  <label>
+<switch style="margin:20px;" checked="{{switch1Checked}}"        
+          bindchange="switchChange"/>
+    <text>Switch1</text>
+  </label>
+  <label>
+<switch style="margin:20px;" checked="{{switch2Checked}}" 
+bindchange="switchChange" />
+    Switch2
+  </label>
+  <label>
+<switch style="margin:20px;" checked="{{switch1Checked}}" bindchange="switchChange"
+         type="checkbox" />
+Checkbox
+  </label>
+  <label>
+<switch style="margin:20px;" checked="{{switch2Checked}}" bindchange="switchChange"
+         type="checkbox" />
+Checkbox
+  </label>  
+</view> -->
+<!-- 
+<view style="margin:20px">
+  <view style="margin-left:15px">地区选择器</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view style="padding: 13px;">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<view style="margin:20px">
+  <view style="margin-left:15px">时间选择器</view>
+  <picker mode="time" value="{{time}}" start="09:01" end="21:01"
+            bindchange="bindTimeChange" >
+    <view style="padding: 13px;">
+      当前选择: {{time}}
+    </view>
+  </picker>
+</view>
+<view style="margin:20px">
+  <view style="margin-left:15px">日期选择器</view>
+  <picker mode="date" value="{{_date}}" start="2015" end="2020"
+           bindchange="bindDateChange" fields="year">
+    <view style="padding: 13px;">
+      当前选择: {{_date}}年
+    </view>
+  </picker>
+</view> -->
+
+
+<view style="margin:20px">
+  <view style="margin:20px">
+    <text style="margin:15px">设置step</text>
+    <slider value="60" bindchange="slider1change"  step="5" show-value/>
+  </view>
+  <view style="margin:20px">
+    <text style="margin:15px">显示当前value</text>
+    <slider value="50" bindchange="slider2change" show-value/>
+  </view>
+  <view style="margin:20px">
+    <text style="margin:15px">设置最小/最大值</text>
+    <slider value="100" bindchange="slider3change" min="50" max="200" show-value/>
+  </view>
+</view>
+
