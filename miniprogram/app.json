@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/index5/index5",
+    "pages/index4/index4",
+    "pages/index3/index3",
     "pages/index2/index2",
     "pages/index1/index1",
     "pages/index/index",
@@ -15,12 +18,13 @@
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
     "pages/im/room/room"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+   
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

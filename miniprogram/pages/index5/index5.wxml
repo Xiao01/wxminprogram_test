@@ -1,0 +1,56 @@
+<!-- <view style="margin:20px;display: flex;flex-direction: column;">
+  <text style="font-size:30px">手机型号：{{model}}</text>
+  <text style="font-size:30px;margin-top:20px">设备像素比：{{pixelRatio}}</text>
+  <text style="font-size:30px;margin-top:20px">窗口宽度：{{windowWidth}}</text>
+  <text style="font-size:30px;margin-top:20px">窗口高度：{{windowHeight}}</text>
+  <text style="font-size:30px;margin-top:20px">微信设置的语言：{{language}}</text>
+  <text style="font-size:30px;margin-top:20px">微信版本号：{{version}}</text>
+  <text style="font-size:30px;margin-top:20px">操作系统版本：{{system}}</text>
+  <text style="font-size:30px;margin-top:20px">客户端平台：{{platform}}</text>
+  <button style="margin-top:20px" bindtap="onClick_SystemInfo">异步获取系统信息</button>
+  <button style="margin-top:20px" bindtap="onClick_SystemInfoSync">同步获取系统信息</button>
+  <button style="margin-top:20px" bindtap="onClick_ClearSystemInfo">清空</button>
+</view> -->
+
+
+<!-- <view style="margin:20px;display: flex;flex-direction: column;">
+  <text style="font-size:30px">网络类型：{{networkType}}</text> 
+  <button style="margin-top:20px" bindtap="onClick_NetworkType">获取网络类型</button>
+</view>
+
+
+<view style="margin:20px;display: flex;flex-direction: column;">
+  <text style="font-size:30px">重力感应：{{zlgy}}</text> 
+  <button style="margin-top:20px" bindtap="zhongliganying">重力感应</button>
+</view>
+
+
+<view style="margin:20px;display: flex;flex-direction: column;">
+  <text style="font-size:30px">方向（0表示正北）：{{direction}}</text> 
+  <button style="margin-top:20px" bindtap="onClick_Direction">监测方向</button>
+</view>
+
+<view style="margin:20px;display: flex;flex-direction: column;">
+  <input placeholder="请输入电话号" value="{{phoneNumber}}" bindInput="input"/>
+  <button style="margin-top:20px" bindtap="onClick_Call">拨打电话</button>
+</view>
+
+
+<view style="margin:20px;display: flex;flex-direction: column;">
+  <text style="word-wrap:break-word;">{{code}}</text>
+  <text>{{scanType}}</text>
+  <text>{{charSet}}</text>
+  <text style="word-wrap:break-word;">{{path}}</text>
+  <button style="margin-top:20px" bindtap="onClick_ScanCode">扫描二维码</button>
+</view> -->
+
+
+<!-- <view bindtap="show_Toast">点击弹出toast</view>
+
+<view bindtap="show_Modal">点击弹出确认消息框</view>
+
+<view bindtap="cancel_showToast">点击关闭消息框</view>
+
+<view bindtap="showActionSheet">打开菜单</view> -->
+
+<view bindtap="changeNavigationBarTitle">修改頁面Title</view>
