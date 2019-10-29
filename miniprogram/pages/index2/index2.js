@@ -1,4 +1,4 @@
-﻿// var initData = '第一行\n第二行'
+// var initData = '第一行\n第二行'
 // Page({
 //   data: {
 //     text: initData,    //  文本的初始数据
@@ -57,7 +57,7 @@
 
 // var app = getApp()
 // Page({
-  
+
 //   upper: function (e) {
 //     console.log(e)
 //   },
@@ -237,27 +237,179 @@
 // Page(pageData) 
 
 
+// Page({
+//   data:{
+//     index:1,
+//     array:["东京","西京","南京","北京"],
+//     time:"12:25",
+//     _date:"2016",
+//   },
+//   bindPickerChange:function(e){
+//     this.setData({
+//       index: e.detail.value
+//     });
+//   },
+//   bindTimeChange: function (e) {
+//     this.setData({
+//       time: e.detail.value
+//     });
+//   },
+//   bindDateChange: function (e) {
+//     this.setData({
+//       _date: e.detail.value
+//     });
+//   },
+
+// })
+
+
+// var pageData = {}
+// for (var i = 1; i < 4; ++i) {
+//   (function (index) {
+//     pageData[`slider${index}change`] = function (e) {
+//       console.log(`slider${index}发生change事件，携带值为`, e.detail.value)
+//     }
+//   })(i);
+// }
+// Page(pageData)
+
+// Page({
+//   formSubmit: function (e) {
+//     console.log('form发生了submit事件，携带数据为：', e.detail.value)
+//   },
+//   formReset: function (e) {
+//     console.log('form发生了reset事件，携带数据为：', e.detail)
+//   },
+//   bindload: function (e) {
+//     console.log(e.detail)
+//   },
+
+//   imageError: function (e) {
+//     console.log("image3发生error事件，携带值为 :"+e.detail.errMsg)
+//   },
+
+//   audioPlayed: function (e) {
+//     console.log('audio is played')
+//   },
+
+//   paused: function (e) {
+//     console.log('audio is paused')
+//   },
+
+//   videoErrorCallback:function(e) {
+//     console.log("videoErrorCallback :" + e.detail.errMsg)
+//   },
+
+// })
+
+
 Page({
-  data:{
-    index:1,
-    array:["东京","西京","南京","北京"],
-    time:"12:25",
-    _date:"2016",
+  data: {
+    src: ""
   },
-  bindPickerChange:function(e){
-    this.setData({
-      index: e.detail.value
-    });
-  },
-  bindTimeChange: function (e) {
-    this.setData({
-      time: e.detail.value
-    });
-  },
-  bindDateChange: function (e) {
-    this.setData({
-      _date: e.detail.value
-    });
+  bindButtonTap: function() {
+    var that = this;
+    wx.chooseVideo({
+      sourceType: ['album', 'camera'],
+      maxDuration: 60,
+      camera: ['front', 'back'],
+      success: function(res) {
+        that.setData({
+          src: res.tempFilePath
+        })
+        console.log(res.tempFilePath);
+      }
+    })
   },
 
+  requestUI: function(){
+
+
+  //   wx.request({
+  //     url: 'https://geekori.com/download/data.json',
+  //    // dataType: 'text/plain',
+  //     success: function(res) {
+  //       //  在控制台中直接输出返回的数据
+  //       console.log(res.data.data.coupons[1].batchName)
+  //     }
+  //   })
+  // }
+
+  //   wx.chooseImage({
+  //     success: function (res) {
+  //       var tempFilePaths = res.tempFilePaths
+  //       wx.uploadFile({
+  //         url: 'https://www.baidu.com',
+  //         filePath: tempFilePaths[0],
+  //         name: 'file',
+  //         formData: {
+  //           'user': 'Bill'
+  //         },
+  //         success: function (res) {
+  //           var data = res.data
+  //           console.log(data);
+  //         }
+  //       })
+  //     }
+  //   })
+  
+    // wx.downloadFile({
+    //   url: 'http://www.xinhuanet.com/politics/leaders/2019-10/27/c_1125157321.html',
+    //   success: function (res) {
+    //     console.log(res.statusCode)
+    //     if (res.statusCode === 200) {
+    //        console.log(res.tempFilePath)
+    //     }
+    //   },
+    //   fail: function (err) {
+    //     console.log(err)
+    //   }
+    // })
+
+   
+   },
+
+socket_Fun:function(){
+  var socketOpen = false
+var socketMsgQueue = []
+wx.connectSocket({
+  url: 'https://www.weibo.com/aj/log/userdevice/',  //  该Url并不存在，只是为了演示假设了一个url
+    data: {
+      ajwvr: 6,
+      y: ''
+    },
+    header: {
+      'content-type': 'application/json'
+    },
+    method: "GET"
+  })
+//  成功建立WebSocket连接后，会调用该函数
+wx.onSocketOpen(function (res) {
+    socketOpen = true
+    for (var i = 0; i < socketMsgQueue.length; i++) {
+      sendSocketMessage(socketMsgQueue[i])
+    }
+    socketMsgQueue = []
+  })
+
+//  向服务端发送数据，如果成功建立了连接，则直接发送，否则保存到消息队列（socketMsgQueue）中
+function sendSocketMessage(msg) {
+    if(socketOpen) {
+      wx.sendSocketMessage({
+        data: msg
+      })
+    } else {
+      socketMsgQueue.push(msg)
+    }
+  }
+//  接收服务端的响应消息，然后关闭WebSocket连接
+wx.onSocketMessage(function (res) {
+    console.log('收到服务器内容：' + res.data)
+    wx.closeSocket()
+  })
+//  成功关闭WebSocket连接后，会调用该函数
+wx.onSocketClose(function (res) {
+    console.log('WebSocket 已关闭！')
+  })
+}
 })

@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 <view class="flex-wrp flex-row"  >
      <view class="flex-item bc_green">1</view>
      <view class="flex-item bc_red">2</view>
@@ -114,7 +114,7 @@
 
 
 
- <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default"> 
+ <!-- <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default"> 
     default
 </button>
 <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" > 
@@ -124,10 +124,10 @@
     warn
 </button>
 <!--  通过hover样式改变了第4个按钮按下的效果 -->
-<button hover-class="hover" bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+<!-- <button hover-class="hover" bindtap="setDisabled">点击设置以上按钮disabled属性</button>
 <button bindtap="setPlain">点击设置以上按钮plain属性</button>
-<button bindtap="setLoading">点击设置以上按钮loading属性</button>
-=======
+<button bindtap="setLoading">点击设置以上按钮loading属性</button> --> 
+
 <!--
 <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default">
   default
@@ -264,7 +264,7 @@ Checkbox
 </view> -->
 
 
-<view style="margin:20px">
+<!-- <view style="margin:20px">
   <view style="margin:20px">
     <text style="margin:15px">设置step</text>
     <slider value="60" bindchange="slider1change"  step="5" show-value/>
@@ -277,5 +277,85 @@ Checkbox
     <text style="margin:15px">设置最小/最大值</text>
     <slider value="100" bindchange="slider3change" min="50" max="200" show-value/>
   </view>
+</view> -->
+<!-- 
+<view style="margin:20px">
+  <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" style="background:#ff0"/>
+</view>
+<view style="margin:20px">
+  <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;"  />
+</view>
+<view style="margin:20px">
+  <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus />
+</view>
+<view style="margin:20px">
+  <textarea placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+  <view class="btn-area">
+    <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+  </view>
+</view> -->
+
+
+<!-- <view style="margin:30px">
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <switch name="switch" checked="true" />
+    <slider style="margin-top:20px" name="slider" show-value></slider>
+    <input style="margin-top:20px" name="input" placeholder="please input here" />
+    <radio-group style="margin-top:20px" name="radio-group">
+      <label>
+        <radio value="radio1" />radio1</label>
+      <label>
+        <radio value="radio2" />radio2</label>
+    </radio-group>
+    <view style="margin-top:20px"> 
+      <checkbox-group name="checkbox">
+        <label>
+          <checkbox value="checkbox1" />checkbox1</label>
+        <label>
+          <checkbox value="checkbox2" />checkbox2</label>
+      </checkbox-group>
+    </view>
+    <view style="margin-top:20px">
+      <button formType="submit">Submit</button>
+      <button formType="reset" style="margin-top:20px">Reset</button>
+    </view>
+  </form>
+</view> -->
+<!-- 
+<view>
+  <view style="margin-bottom:20px">从网络上获取图像哒哒哒哒哒哒多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多多</view>
+  <image src="https://geekori.com/images/ewm_dy.jp"  bindload="bindload" mode="bottom left" binderror="imageError" />
+</view> -->
+
+<!-- 
+<audio bindpause="paused" bindplay="audioPlayed" poster="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=673bf76787b1cb132a643441bc3d3d2b/b8014a90f603738dfae490aab91bb051f919ec88.jpg" author="Maroon 5" name="sugar" src="http://store.133998.com/2014/ring/000/118/28b0e17cfab0136677648b39cb8b7fbc.mp3" controls/> -->
+
+<!-- <view style="margin:30px">
+  <text >播放网络视频</text>
+  <video  style="margin-top:10px" 
+  src="http://flv.bn.netease.com/videolib3/1605/22/auDfZ8781/HD/auDfZ8781-mobile.mp4" binderror="videoErrorCallback"  autoplay="true" ></video>
 </view>
 
+
+<view style="margin:30px">
+  <video src="{{src}}" autoplay="true"></video>
+  <button bindtap="bindButtonTap">获取视频</button>
+</view>
+
+
+<view style="margin:30px">
+  <video src="http://tmp/wx4fba98bae90455a0.o6zAJs7lTkprUx2n7NgV9S0DoJpY.1UCFXB48n3Ps343254a852dbb7cf8ccd59013585e8f3.mp4"
+     autoplay="true"></video>
+  <button bindtap="bindButtonTap">获取视频</button>
+</view> -->
+
+
+
+<!-- <view style="margin:30px" bindtap="requestUI">
+  <text >播放网络视频</text>
+  <video  style="margin-top:10px" 
+  src="http://flv.bn.netease.com/videolib3/1605/22/auDfZ8781/HD/auDfZ8781-mobile.mp4" binderror="videoErrorCallback"></video>
+</view> -->
+
+
+<view bindtap="socket_Fun">点击我 练习 webSocket</view>
