@@ -1,0 +1,6 @@
+<view style="margin:20px">
+  <view style="justify-content:center;display:flex">
+    <canvas style="width:100%;height:200px;" canvas-id="canvas"></canvas>
+  </view>
+  <button style="margin-top:20px" bindtap="draw">绘制基本图形</button>
+</view>

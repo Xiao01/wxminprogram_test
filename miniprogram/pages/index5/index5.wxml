@@ -54,3 +54,9 @@
 <view bindtap="showActionSheet">打开菜单</view> -->
 
 <view bindtap="changeNavigationBarTitle">修改頁面Title</view>
+
+<view bindtap="onClick_showNavigationBarLoading">显示导航条动画</view>
+
+<view bindtap="onClick_hideNavigationBarLoading">隐藏导航条动画</view>
+
+<view bindtap="onClick_NavigationTo">跳转到Page6</view>

@@ -6,78 +6,78 @@ var imageIndex = 0;
 
 Page({
   data: {
-    imagePath: imagePaths[0],  //  用于修改image组件显示图像的变量
-    title: '开始',                //  用于改变按钮文本的变量
-    isRunning: false,            //  该变量为true，表示图像正在快速切换
+    imagePath: imagePaths[0], //  用于修改image组件显示图像的变量
+    title: '开始', //  用于改变按钮文本的变量
+    isRunning: false, //  该变量为true，表示图像正在快速切换
     userInfo: {},
 
 
   },
+
+
   //事件处理函数
-  bindViewTap: function () {
+  bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
   //  定时器要执行的函数
-  change: function (e) {
+  change: function(e) {
     imageIndex++;
     //  当前图像索引大于最大索引时，重新设为第一个索引值（已达到循环显示图像的目的）
     if (imageIndex > 2) {
       imageIndex = 0;
     }
     //  修改image组件要显示的图像（改变imagePath变量的值）
-    this.setData(
-      {
-        imagePath: imagePaths[imageIndex]
-      }
-    )
+    this.setData({
+      imagePath: imagePaths[imageIndex]
+    })
   },
   //  点击按钮要执行的函数
-  guess: function (e) {
+  guess: function(e) {
     //  获取isRunning变量的值
     let isRunning = this.data.isRunning;
     // 根据是否正在快速切换图像，决定如何修改按钮文本，以及是开启定时器，还是移除定时器
     if (!isRunning) {
-      this.setData(
-        {
-          title: '停止',
-          isRunning: true
-        }
-      );
+      this.setData({
+        title: '停止',
+        isRunning: true
+      });
       //  开启定时器（没100毫秒调用一次change函数）
-      this.timer = setInterval((function () {
+      this.timer = setInterval((function() {
         this.change()
       }).bind(this), 100);
-    }
-    else {
-      this.setData(
-        {
-          title: '开始',
-          isRunning: false
-        }
-      );
+    } else {
+      this.setData({
+        title: '开始',
+        isRunning: false
+      });
       //  移除定时器
       this.timer && clearInterval(this.timer);
       console.log(this.timer)
     }
   },
-  onLoad: function () {
+  onLoad: function (option) {
     console.log('onLoad')
+       //  获取导航时传过来的参数值，并将该参数值设置为当前页面的标题
+    console.log(option.title )
+    wx.setNavigationBarTitle({
+      title: option.title + "_page"
+    })
     var that = this
 
-    
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              that.setData({
-               // avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              })
-            }
-          })
-      
-  
+
+    // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+    wx.getUserInfo({
+      success: res => {
+        that.setData({
+          // avatarUrl: res.userInfo.avatarUrl,
+          userInfo: res.userInfo
+        })
+      }
+    })
+
+
 
     console.log(that.data.userInfo)
   }

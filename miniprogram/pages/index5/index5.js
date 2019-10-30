@@ -138,7 +138,7 @@ Page({
     path: ''
   },
 
-  changeNavigationBarTitle: function () {
+  changeNavigationBarTitle: function() {
     console.log("修改NavigationBartitle")
     wx.setNavigationBarTitle({
       title: '天气预报'
@@ -203,6 +203,16 @@ Page({
     })
   },
 
+  onClick_showNavigationBarLoading: function() {
+    wx.showNavigationBarLoading(); //  显示导航条动画
+  },
+  onClick_hideNavigationBarLoading: function() {
+    wx.hideNavigationBarLoading(); //  隐藏导航条动画
+  },
 
-
+  onClick_NavigationTo: function() {
+    wx.navigateTo({
+      url: '../index6/index6?title=新页面',
+    })
+  }
 })

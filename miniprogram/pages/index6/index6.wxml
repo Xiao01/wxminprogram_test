@@ -1,0 +1,5 @@
+<view style="margin:20px">
+  <input placeholder="请输入返回第几层页面" style="margin:20px"  value="{{value}}" bindinput="charInput"/>
+  <button style="margin:20px" bindtap="onClick_navigateBack">返回</button>
+  <button style="margin-top:10px" bindtap="onClick_navigateTo">跳转到page1页面</button>
+</view>
