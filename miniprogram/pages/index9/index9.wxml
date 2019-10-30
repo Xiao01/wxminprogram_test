@@ -1,0 +1,44 @@
+<button bindtap='login'>小程序登录微信</button>
+<button bindtap='onClickCheckSession'>检测会话是否过期</button>
+
+<button bindtap='onClickGetUserInfo' open-type='getUserInfo' >获取用户信息</button>
+
+<button bindtap='onClickRequestPayment' >微信支付</button>
+
+<view class="page__bd">
+  <view class="weui-loadmore">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+  </view>
+  <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+  </view>
+</view>
+
+
+<view style="margin:20px">
+  <view class="weui-grids">
+    <block wx:for-items="{{grids}}" wx:key="{{index}}">
+      <navigator url="/pages/index{{index}}/index{{index}}" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="/images/bu.png" />
+        <view class="weui-grid__label">{{index}}</view>
+      </navigator>
+    </block>
+  </view>
+</view>
+
+<view class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__links">
+    <navigator url="/pages/index1/index1?title='从底部底部点击'" class="weui-footer__link">底部链接</navigator>
+    <navigator url="/pages/index1/index1?title='从底部底部点击'" class="weui-footer__link">底部链接</navigator>
+
+  </view>
+  <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
+</view>
+
+<view class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__text">Copyright © 2008-2016 weui.io</view>
+</view>

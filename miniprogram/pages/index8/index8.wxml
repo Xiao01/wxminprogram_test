@@ -2,5 +2,22 @@
   <view style="justify-content:center;display:flex">
     <canvas style="width:100%;height:200px;" canvas-id="canvas"></canvas>
   </view>
-  <button style="margin-top:20px" bindtap="draw">绘制基本图形</button>
+  <!-- <button style="margin-top:10px" bindtap="draw">绘制基本图形</button>
+  <button style="margin-top:10px" bindtap="drawQuadraticCurveTo">绘制二次方贝塞尔曲线</button>
+  <button style="margin-top:10px" bindtap="drawBezierCurveTo">绘制三次方贝塞尔曲线</button>
+ <button style="margin-top:10px" bindtap="drawShallow">绘制阴影</button>
+<button style="margin-top:10px" bindtap="drawImage">绘制图像</button> -->
+<button style="margin-top:10px" bindtap="drawShallow">绘制阴影</button>
+<button style="margin-top:10px" bindtap="drawScale">图像缩放</button>
+<button style="margin-top:10px" bindtap="drawRotate">图像旋转</button>
+<button style="margin-top:10px" bindtap="drawTranslate">改变坐标原点</button>
+<button style="margin-top:10px" bindtap="drawGradient">渐变</button>
+<button style="margin-top:10px" bindtap="drawGradient2">圆形渐变</button>
+
+
+
+
 </view>
+  
+  
+  

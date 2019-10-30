@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/index11/index11",
+    "pages/index10/index10",
+    "pages/index9/index9",
     "pages/index8/index8",
     "pages/index7/index7",
     "pages/index5/index5",
@@ -9,7 +13,7 @@
     "pages/index3/index3",
     "pages/index2/index2",
     "pages/index1/index1",
-    "pages/index/index",
+    
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -24,7 +28,7 @@
     "pages/im/room/room"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#ffffff",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTextStyle": "black"
