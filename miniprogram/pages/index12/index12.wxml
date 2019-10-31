@@ -1,0 +1,6 @@
+<!--pages/index12/index12.wxml-->
+<text>pages/index12/index12.wxml</text>
+<view>
+
+<button bindtap="delete_test_db">删除test数据</button>
+</view>
