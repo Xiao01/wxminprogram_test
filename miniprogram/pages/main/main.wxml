@@ -1,0 +1,28 @@
+<view>
+  <input style='margin-top: 10rpx;' placeholder="请输入姓名" bindinput="bindKeyInputName" />
+  <input style='margin-top: 10rpx;' placeholder="请输入年龄" bindinput="bindKeyInputAge" />
+  <button style='margin-top: 10rpx;' bindtap='insertData'>插入数据</button>
+  <input style='margin-top: 10rpx;' placeholder="请输入记录ID" value="{{recordId}}" bindinput="bindKeyInputId" />
+
+  <button style='margin-top: 10rpx;' bindtap='queryData'>查询数据</button>
+
+  <text style='margin-top: 10rpx;'>
+     姓名：{{nameResult}}
+  </text>
+  <text style='margin-top: 80rpx;'>
+     年龄：{{ageResult}}
+  </text>
+
+  <button style='margin-top: 10rpx;' bindtap='onClick_InsertDoc1'>插入数据</button>
+  <button style='margin-top: 10rpx;' bindtap='onClick_InsertDoc2'>插入数据2</button>
+
+  <button style='margin-top: 10rpx;' bindtap='onClick_GetDocWithId'>查询数据</button>
+  <button style='margin-top: 10rpx;' bindtap='onClick_GetAllDoc'>查询全部数据</button>
+  <button style='margin-top: 10rpx;' bindtap='where_select'>多条件查询数据</button>
+  <button style='margin-top: 10rpx;' bindtap='update_cluld_database'>更新数据</button>
+  <button style='margin-top: 10rpx;' bindtap='onClick_Remove'>删除数据</button>
+
+
+
+
+</view>
