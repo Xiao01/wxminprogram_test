@@ -1,0 +1,10 @@
+<!--pages/index13/index13.wxml-->
+<text>pages/index13/index13.wxml</text>
+
+
+<view class="viewBox" style="background:#f8f8f8;height:50px;width:100px">
+<button class="button.weui-vcode-btn" bindtap="remove_test1_onClick">
+remove test1
+</button>
+
+</view>
