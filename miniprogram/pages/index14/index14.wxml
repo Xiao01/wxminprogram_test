@@ -1,0 +1,25 @@
+<!--pages/index14/index14.wxml-->
+<text>pages/index14/index14.wxml</text>
+<!--miniprogram/pages/fb/fb.wxml-->
+<view class='pages'>
+  <view class='top'><text class='top_name'>商品图片：</text></view>
+  <!-- 图片 -->
+  <view class="images_box">
+    <block wx:key="imgbox" wx:for="{{imgbox}}">
+      <view class='img-box'>
+        <image class='img' src='{{item}}'></image>
+        <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+          <image class='img' src='../../images/p1.jpg'></image>   
+        </view>
+      </view>
+    </block>
+    <view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<9}}">
+      <image class='img' src='../../images/add.jpg'></image>   
+    </view>
+  </view>
+  <button bindtap='fb'>上传图片</button>
+
+  <button bindtap='download'>下载图片</button>
+
+   <button bindtap='delete'>删除图片</button>
+</view>

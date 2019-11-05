@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/express_check/express_check",
+    "pages/calculator/calculator",
+    "pages/index14/index14",
     "pages/index13/index13",
     "pages/index12/index12",
     "pages/main/main",

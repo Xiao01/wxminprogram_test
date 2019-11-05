@@ -1,0 +1,13 @@
+/* pages/express_check/express_check.wxss */
+.picker-wrapper { 
+  background-color: #FFF; 
+  padding: 20px 30px 10px 20px;  
+}
+
+.picker-select {
+    width: 70%;
+    display: inline-block;
+    border: 1px solid #ddd;
+    background-color: #FFF; 
+    border-radius: 2px; 
+}
