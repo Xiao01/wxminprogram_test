@@ -1,0 +1,17 @@
+.list-img{
+    width: 130rpx;
+    height: 180rpx;
+    margin-right: 20rpx;
+    position: relative;
+}
+.list-img .img{
+    width: 130rpx;
+    height: 180rpx;
+}
+.list-play{
+    position: absolute;
+    left: 45rpx;
+    top: 70rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
