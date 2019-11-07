@@ -1,0 +1,4 @@
+<view class="container">
+    <canvas canvas-id="lineCanvas" class="canvas"></canvas>
+    <button type="primary" style="margin-top: 40rpx;" bindtap="updateData">更新数据</button>
+</view>

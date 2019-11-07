@@ -1,7 +1,8 @@
 {
   "pages": [
-  "pages/movie-ticket_booking_system/list/list",
-  "pages/movie-ticket_booking_system/booking/booking",
+    "pages/draw/draw",
+    "pages/movie-ticket_booking_system/list/list",
+    "pages/movie-ticket_booking_system/booking/booking",
     "pages/express_check/express_check",
     "pages/calculator/calculator",
     "pages/index14/index14",
