@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/draw/draw",
+    "pages/chart/area/area",
+    "pages/chart/ring/ring",
+    "pages/chart/column/column",
+    "pages/chart/line/line",
+    "pages/chart/pie/pie",
     "pages/movie-ticket_booking_system/list/list",
     "pages/movie-ticket_booking_system/booking/booking",
     "pages/express_check/express_check",
